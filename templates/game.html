@@ -2,15 +2,15 @@
 <html>
 <head>
     <title>Flashcard Quiz</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="/static/style.css">
+   
 </head>
 <body>
     <div class="flashcard" id="flashcard">
         <div class="front">
             <h2>Question {{ index }} of {{ total }}</h2>
             <p>{{ q['question'] }}</p>
-            <form method="post" action="{{ url_for('answer') }}">
+            <form method="post" action="/templates/results.html">
                 {% for opt in q['options'] %}
                     <label>
                         <input type="radio" name="option" value="{{ opt[0] }}" required> {{ opt }}
@@ -22,4 +22,5 @@
         </div>
     </div>
 </body>
+ <script defer src="/static/script.js"></script>
 </html>

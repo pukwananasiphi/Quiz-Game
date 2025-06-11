@@ -2,14 +2,15 @@
 <html>
 <head>
     <title>Python Data Science Flashcard Quiz</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <h1>Python Data Science Flashcard Quiz</h1>
     <form method="post">
         <label for="num_questions">How many questions? (max {{ total }})</label>
         <input type="number" name="num_questions" min="1" max="{{ total }}" value="10" required>
-        <button type="submit">Start Quiz</button>
+        <button type="submit"  id="start-btn" >Start Quiz</button>
     </form>
 </body>
+ <script defer src="/static/script.js"></script>
 </html>
