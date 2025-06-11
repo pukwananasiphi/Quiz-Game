@@ -1,0 +1,1102 @@
+ [{
+                "question": "Which library is primarily used for data manipulation and analysis in Python?",
+                "options": ["A) NumPy", "B) Pandas", "C) Matplotlib", "D) Seaborn"],
+                "answer": "B",
+                "explanation": "Pandas is the go-to library for data manipulation and analysis, providing DataFrames and Series."
+            },
+            {
+                "question": "What does 'df.head()' do in Pandas?",
+                "options": ["A) Shows the last 5 rows", "B) Shows the first 5 rows", "C) Shows column headers", "D) Shows data types"],
+                "answer": "B",
+                "explanation": "df.head() displays the first 5 rows of a DataFrame by default."
+            },
+            {
+                "question": "How do you select a specific column from a Pandas DataFrame?",
+                "options": ["A) df['column_name']", "B) df.get('column_name')", "C) df.select('column_name')", "D) df.column('column_name')"],
+                "answer": "A",
+                "explanation": "Use square brackets with the column name: df['column_name']."
+            },
+            {
+                "question": "Which method groups data in Pandas?",
+                "options": ["A) df.group()", "B) df.groupby()", "C) df.aggregate()", "D) df.cluster()"],
+                "answer": "B",
+                "explanation": "df.groupby() groups DataFrame using a mapper or by a Series of columns."
+            },
+            {
+                "question": "How do you read a CSV file using Pandas?",
+                "options": ["A) pd.load_csv()", "B) pd.read_csv()", "C) pd.import_csv()", "D) pd.open_csv()"],
+                "answer": "B",
+                "explanation": "pd.read_csv() is the standard function to read CSV files into a DataFrame."
+            },
+            {
+                "question": "What does 'df.info()' display?",
+                "options": ["A) Statistical summary", "B) Data types and non-null counts", "C) First few rows", "D) Column correlations"],
+                "answer": "B",
+                "explanation": "df.info() provides information about the DataFrame including data types and non-null counts."
+            },
+            {
+                "question": "Which method is used to handle missing values in Pandas?",
+                "options": ["A) df.remove_na()", "B) df.dropna()", "C) df.delete_missing()", "D) df.clean()"],
+                "answer": "B",
+                "explanation": "df.dropna() removes rows or columns with missing values (NaN)."
+            },
+            {
+                "question": "What does 'df.describe()' return?",
+                "options": ["A) Column names", "B) Data types", "C) Statistical summary", "D) Missing values count"],
+                "answer": "C",
+                "explanation": "df.describe() provides statistical summary including mean, std, min, max, and quartiles."
+            },
+            {
+                "question": "How do you sort a DataFrame by a column in Pandas?",
+                "options": ["A) df.sort('column')", "B) df.sort_values('column')", "C) df.order_by('column')", "D) df.arrange('column')"],
+                "answer": "B",
+                "explanation": "df.sort_values() is used to sort DataFrame by values along either axis."
+            },
+            {
+                "question": "What is the correct way to filter rows in a DataFrame?",
+                "options": ["A) df.filter(df['col'] > 5)", "B) df[df['col'] > 5]", "C) df.where(df['col'] > 5)", "D) df.query('col > 5')"],
+                "answer": "B",
+                "explanation": "Boolean indexing with df[df['col'] > 5] is the most common filtering method."
+            },
+            {
+                "question": "How do you get unique values from a Pandas Series?",
+                "options": ["A) series.unique()", "B) series.distinct()", "C) series.different()", "D) series.uniq()"],
+                "answer": "A",
+                "explanation": "The unique() method returns unique values from a Series."
+            },
+            {
+                "question": "What does 'df.shape' return?",
+                "options": ["A) Data types", "B) Column names", "C) (rows, columns) tuple", "D) Memory usage"],
+                "answer": "C",
+                "explanation": "df.shape returns a tuple representing the dimensionality of the DataFrame (rows, columns)."
+            },
+            {
+                "question": "How do you rename columns in a DataFrame?",
+                "options": ["A) df.rename_columns()", "B) df.rename(columns={'old': 'new'})", "C) df.set_columns()", "D) df.change_names()"],
+                "answer": "B",
+                "explanation": "df.rename(columns={'old_name': 'new_name'}) renames columns."
+            },
+            {
+                "question": "Which method is used to merge two DataFrames?",
+                "options": ["A) df.join()", "B) df.merge()", "C) df.combine()", "D) Both A and B"],
+                "answer": "D",
+                "explanation": "Both merge() and join() can be used to combine DataFrames, with merge() being more flexible."
+            },
+            {
+                "question": "How do you check for missing values in a DataFrame?",
+                "options": ["A) df.isna()", "B) df.missing()", "C) df.null_check()", "D) df.empty()"],
+                "answer": "A",
+                "explanation": "df.isna() or df.isnull() returns a DataFrame showing True for missing values."
+            },
+            {
+                "question": "What does 'df.value_counts()' do on a Series?",
+                "options": ["A) Counts unique values", "B) Counts total values", "C) Counts missing values", "D) Counts duplicates"],
+                "answer": "A",
+                "explanation": "value_counts() returns a Series containing counts of unique values."
+            },
+            {
+                "question": "How do you apply a function to each element in a DataFrame column?",
+                "options": ["A) df['col'].apply(func)", "B) df['col'].map(func)", "C) Both A and B", "D) df['col'].transform(func)"],
+                "answer": "C",
+                "explanation": "Both apply() and map() can be used to apply functions to Series elements."
+            },
+            {
+                "question": "What is the default behavior of pd.read_csv() for headers?",
+                "options": ["A) No header", "B) First row as header", "C) Last row as header", "D) Auto-detect"],
+                "answer": "B",
+                "explanation": "By default, pd.read_csv() treats the first row as column headers."
+            },
+            {
+                "question": "How do you concatenate DataFrames vertically?",
+                "options": ["A) pd.concat([df1, df2])", "B) df1.append(df2)", "C) Both A and B", "D) pd.join([df1, df2])"],
+                "answer": "C",
+                "explanation": "Both pd.concat() and append() can concatenate DataFrames vertically."
+            },
+            {
+                "question": "What does 'df.iloc[0:5, 1:3]' select?",
+                "options": ["A) First 5 rows, columns 1-3", "B) Rows 0-4, columns 1-2", "C) First 5 columns, rows 1-3", "D) Rows 1-5, columns 1-3"],
+                "answer": "B",
+                "explanation": "iloc uses integer-location based indexing. [0:5, 1:3] selects rows 0-4 and columns 1-2."
+            },
+            {
+                "question": "How do you fill missing values with a specific value?",
+                "options": ["A) df.fillna(value)", "B) df.replace_na(value)", "C) df.fill_missing(value)", "D) df.substitute(value)"],
+                "answer": "A",
+                "explanation": "df.fillna(value) fills missing values with the specified value."
+            },
+            {
+                "question": "What is the difference between loc and iloc?",
+                "options": ["A) No difference", "B) loc uses labels, iloc uses integers", "C) loc is faster", "D) iloc is deprecated"],
+                "answer": "B",
+                "explanation": "loc uses label-based indexing while iloc uses integer position-based indexing."
+            },
+            {
+                "question": "How do you get the data type of DataFrame columns?",
+                "options": ["A) df.dtypes", "B) df.types", "C) df.data_types", "D) df.column_types"],
+                "answer": "A",
+                "explanation": "df.dtypes returns the data types of each column in the DataFrame."
+            },
+            {
+                "question": "What does 'df.drop_duplicates()' do?",
+                "options": ["A) Removes duplicate columns", "B) Removes duplicate rows", "C) Removes duplicate values in a column", "D) Removes duplicate indices"],
+                "answer": "B",
+                "explanation": "drop_duplicates() removes duplicate rows from the DataFrame."
+            },
+            {
+                "question": "How do you save a DataFrame to a CSV file?",
+                "options": ["A) df.save_csv('file.csv')", "B) df.to_csv('file.csv')", "C) df.export_csv('file.csv')", "D) df.write_csv('file.csv')"],
+                "answer": "B",
+                "explanation": "df.to_csv() exports the DataFrame to a CSV file."
+            },
+            {
+                "question": "What does 'df.sample(n=5)' do?",
+                "options": ["A) Takes first 5 rows", "B) Takes last 5 rows", "C) Takes 5 random rows", "D) Takes every 5th row"],
+                "answer": "C",
+                "explanation": "sample() returns a random sample of items from the DataFrame."
+            },
+            {
+                "question": "How do you reset the index of a DataFrame?",
+                "options": ["A) df.reset_index()", "B) df.reindex()", "C) df.new_index()", "D) df.index_reset()"],
+                "answer": "A",
+                "explanation": "reset_index() resets the index of the DataFrame to default integer index."
+            },
+            {
+                "question": "What does 'df.corr()' calculate?",
+                "options": ["A) Covariance matrix", "B) Correlation matrix", "C) Standard deviation", "D) Mean values"],
+                "answer": "B",
+                "explanation": "df.corr() computes pairwise correlation of columns, excluding NA/null values."
+            },
+            {
+                "question": "How do you convert a column to datetime in Pandas?",
+                "options": ["A) pd.to_datetime(df['col'])", "B) df['col'].datetime()", "C) pd.datetime(df['col'])", "D) df['col'].to_date()"],
+                "answer": "A",
+                "explanation": "pd.to_datetime() converts strings or numbers to datetime objects."
+            },
+            {
+                "question": "What is a MultiIndex in Pandas?",
+                "options": ["A) Multiple DataFrames", "B) Hierarchical indexing", "C) Multiple columns", "D) Multiple data types"],
+                "answer": "B",
+                "explanation": "MultiIndex allows hierarchical indexing with multiple levels of index labels."
+            },
+
+            
+            {
+                "question": "Which NumPy function creates an array of zeros?",
+                "options": ["A) np.empty()", "B) np.ones()", "C) np.zeros()", "D) np.full()"],
+                "answer": "C",
+                "explanation": "np.zeros() creates an array filled with zeros of specified shape."
+            },
+            {
+                "question": "What is the shape attribute in NumPy arrays?",
+                "options": ["A) Returns the data type", "B) Returns dimensions as tuple", "C) Returns total elements", "D) Returns memory usage"],
+                "answer": "B",
+                "explanation": "The shape attribute returns a tuple representing the dimensions of the array."
+            },
+            {
+                "question": "What does 'np.array([1, 2, 3]).dtype' return?",
+                "options": ["A) The shape", "B) The size", "C) The data type", "D) The dimensions"],
+                "answer": "C",
+                "explanation": "The dtype attribute returns the data type of the array elements."
+            },
+            {
+                "question": "How do you create a 3x3 identity matrix in NumPy?",
+                "options": ["A) np.identity(3)", "B) np.eye(3)", "C) Both A and B", "D) np.ones((3,3))"],
+                "answer": "C",
+                "explanation": "Both np.identity() and np.eye() create identity matrices."
+            },
+            {
+                "question": "What does 'np.arange(0, 10, 2)' create?",
+                "options": ["A) [0, 2, 4, 6, 8]", "B) [0, 2, 4, 6, 8, 10]", "C) [2, 4, 6, 8, 10]", "D) [0, 1, 2, 3, 4]"],
+                "answer": "A",
+                "explanation": "np.arange(start, stop, step) creates an array from 0 to 10 (exclusive) with step 2."
+            },
+            {
+                "question": "How do you reshape a NumPy array?",
+                "options": ["A) array.reshape(shape)", "B) array.resize(shape)", "C) np.reshape(array, shape)", "D) Both A and C"],
+                "answer": "D",
+                "explanation": "Both array.reshape() method and np.reshape() function can reshape arrays."
+            },
+            {
+                "question": "What does 'np.random.seed()' do?",
+                "options": ["A) Generates random numbers", "B) Sets random number generator state", "C) Creates random arrays", "D) Shuffles arrays"],
+                "answer": "B",
+                "explanation": "np.random.seed() sets the random number generator state for reproducible results."
+            },
+            {
+                "question": "How do you find the maximum value in a NumPy array?",
+                "options": ["A) array.max()", "B) np.max(array)", "C) Both A and B", "D) array.maximum()"],
+                "answer": "C",
+                "explanation": "Both array.max() method and np.max() function return the maximum value."
+            },
+            {
+                "question": "What does 'np.linspace(0, 1, 5)' create?",
+                "options": ["A) [0, 0.2, 0.4, 0.6, 0.8]", "B) [0, 0.25, 0.5, 0.75, 1]", "C) [0, 1, 2, 3, 4]", "D) [0, 0.1, 0.2, 0.3, 0.4]"],
+                "answer": "B",
+                "explanation": "np.linspace() creates evenly spaced numbers over a specified interval, including endpoints."
+            },
+            {
+                "question": "How do you calculate the mean of a NumPy array?",
+                "options": ["A) array.mean()", "B) np.mean(array)", "C) Both A and B", "D) array.average()"],
+                "answer": "C",
+                "explanation": "Both array.mean() method and np.mean() function calculate the arithmetic mean."
+            },
+            {
+                "question": "What is broadcasting in NumPy?",
+                "options": ["A) Copying arrays", "B) Operations on different sized arrays", "C) Array transmission", "D) Memory allocation"],
+                "answer": "B",
+                "explanation": "Broadcasting allows NumPy to perform operations on arrays with different shapes."
+            },
+            {
+                "question": "How do you transpose a NumPy array?",
+                "options": ["A) array.T", "B) array.transpose()", "C) np.transpose(array)", "D) All of the above"],
+                "answer": "D",
+                "explanation": "All three methods (.T, .transpose(), np.transpose()) can transpose arrays."
+            },
+            {
+                "question": "What does 'np.concatenate()' do?",
+                "options": ["A) Joins arrays along existing axis", "B) Creates new arrays", "C) Splits arrays", "D) Reshapes arrays"],
+                "answer": "A",
+                "explanation": "np.concatenate() joins a sequence of arrays along an existing axis."
+            },
+            {
+                "question": "How do you create a random array with shape (3,4)?",
+                "options": ["A) np.random.rand(3,4)", "B) np.random.random((3,4))", "C) Both A and B", "D) np.random.array(3,4)"],
+                "answer": "C",
+                "explanation": "Both np.random.rand() and np.random.random() can create random arrays."
+            },
+            {
+                "question": "What does 'np.where()' do?",
+                "options": ["A) Finds array indices", "B) Conditional element selection", "C) Locates elements", "D) All of the above"],
+                "answer": "D",
+                "explanation": "np.where() can find indices, select elements conditionally, and locate elements."
+            },
+            {
+                "question": "How do you calculate element-wise multiplication?",
+                "options": ["A) array1 * array2", "B) np.multiply(array1, array2)", "C) Both A and B", "D) array1.multiply(array2)"],
+                "answer": "C",
+                "explanation": "Both * operator and np.multiply() perform element-wise multiplication."
+            },
+            {
+                "question": "What is the difference between np.array() and np.asarray()?",
+                "options": ["A) No difference", "B) asarray() doesn't copy if input is already array", "C) array() is faster", "D) asarray() is deprecated"],
+                "answer": "B",
+                "explanation": "np.asarray() doesn't make a copy if the input is already an ndarray."
+            },
+            {
+                "question": "How do you save a NumPy array to a file?",
+                "options": ["A) np.save()", "B) array.save()", "C) np.savez()", "D) Both A and C"],
+                "answer": "D",
+                "explanation": "Both np.save() for single arrays and np.savez() for multiple arrays can save to files."
+            },
+            {
+                "question": "What does 'np.flatten()' do?",
+                "options": ["A) Returns a copy as 1D array", "B) Returns a view as 1D array", "C) Compresses array", "D) Removes dimensions"],
+                "answer": "A",
+                "explanation": "flatten() returns a copy of the array collapsed into one dimension."
+            },
+            {
+                "question": "How do you calculate the dot product of two arrays?",
+                "options": ["A) np.dot(a, b)", "B) a @ b", "C) a.dot(b)", "D) All of the above"],
+                "answer": "D",
+                "explanation": "All three methods can calculate dot products: np.dot(), @ operator, and .dot() method."
+            },
+            {
+                "question": "What does 'np.argmax()' return?",
+                "options": ["A) Maximum value", "B) Index of maximum value", "C) Maximum values along axis", "D) Sorted indices"],
+                "answer": "B",
+                "explanation": "np.argmax() returns the indices of the maximum values along an axis."
+            },
+            {
+                "question": "How do you check if two arrays are equal?",
+                "options": ["A) array1 == array2", "B) np.array_equal(array1, array2)", "C) np.allclose(array1, array2)", "D) All can be used"],
+                "answer": "D",
+                "explanation": "== for element-wise, array_equal for exact equality, allclose for approximate equality."
+            },
+            {
+                "question": "What is the purpose of np.newaxis?",
+                "options": ["A) Creates new arrays", "B) Adds new dimension", "C) Removes dimensions", "D) Changes axis order"],
+                "answer": "B",
+                "explanation": "np.newaxis (alias for None) is used to add new axes to arrays."
+            },
+            {
+                "question": "How do you create an array with values from 1 to 10?",
+                "options": ["A) np.arange(1, 11)", "B) np.range(1, 10)", "C) np.array([1:10])", "D) np.sequence(1, 10)"],
+                "answer": "A",
+                "explanation": "np.arange(1, 11) creates an array from 1 to 10 (11 is exclusive)."
+            },
+            {
+                "question": "What does 'array.ndim' return?",
+                "options": ["A) Array size", "B) Number of dimensions", "C) Array shape", "D) Data type"],
+                "answer": "B",
+                "explanation": "The ndim attribute returns the number of array dimensions."
+            },
+
+       
+            {
+                "question": "What is the correct way to import matplotlib.pyplot?",
+                "options": ["A) import matplotlib as plt", "B) import pyplot as plt", "C) import matplotlib.pyplot as plt", "D) from matplotlib import pyplot"],
+                "answer": "C",
+                "explanation": "The standard convention is 'import matplotlib.pyplot as plt'."
+            },
+            {
+                "question": "How do you create a line plot in matplotlib?",
+                "options": ["A) plt.line()", "B) plt.plot()", "C) plt.lineplot()", "D) plt.draw()"],
+                "answer": "B",
+                "explanation": "plt.plot() creates line plots in matplotlib."
+            },
+            {
+                "question": "How do you add a title to a plot?",
+                "options": ["A) plt.title('Title')", "B) plt.set_title('Title')", "C) plt.add_title('Title')", "D) plt.name('Title')"],
+                "answer": "A",
+                "explanation": "plt.title() sets the title of the current plot."
+            },
+            {
+                "question": "How do you add axis labels in matplotlib?",
+                "options": ["A) plt.xlabel() and plt.ylabel()", "B) plt.label_x() and plt.label_y()", "C) plt.x_label() and plt.y_label()", "D) plt.axis_labels()"],
+                "answer": "A",
+                "explanation": "plt.xlabel() and plt.ylabel() set the x and y axis labels respectively."
+            },
+            {
+                "question": "How do you create a scatter plot?",
+                "options": ["A) plt.scatter()", "B) plt.scatterplot()", "C) plt.points()", "D) plt.dot()"],
+                "answer": "A",
+                "explanation": "plt.scatter() creates scatter plots with individual data points."
+            },
+            {
+                "question": "How do you save a plot to a file?",
+                "options": ["A) plt.save()", "B) plt.savefig()", "C) plt.export()", "D) plt.write()"],
+                "answer": "B",
+                "explanation": "plt.savefig() saves the current figure to a file."
+            },
+            {
+                "question": "How do you create subplots in matplotlib?",
+                "options": ["A) plt.subplot()", "B) plt.subplots()", "C) Both A and B", "D) plt.create_subplots()"],
+                "answer": "C",
+                "explanation": "Both plt.subplot() and plt.subplots() can create subplots with different approaches."
+            },
+            {
+                "question": "How do you add a legend to a plot?",
+                "options": ["A) plt.legend()", "B) plt.add_legend()", "C) plt.show_legend()", "D) plt.key()"],
+                "answer": "A",
+                "explanation": "plt.legend() adds a legend to the current plot."
+            },
+            {
+                "question": "How do you create a histogram?",
+                "options": ["A) plt.hist()", "B) plt.histogram()", "C) plt.bar()", "D) plt.frequency()"],
+                "answer": "A",
+                "explanation": "plt.hist() creates histograms showing frequency distributions."
+            },
+            {
+                "question": "How do you change the color of a plot line?",
+                "options": ["A) plt.plot(x, y, color='red')", "B) plt.plot(x, y, c='red')", "C) Both A and B", "D) plt.color('red')"],
+                "answer": "C",
+                "explanation": "Both 'color' and 'c' parameters can specify line colors in plot functions."
+            },
+            {
+                "question": "How do you set the x-axis limits?",
+                "options": ["A) plt.xlim()", "B) plt.set_xlim()", "C) plt.x_limits()", "D) plt.xrange()"],
+                "answer": "A",
+                "explanation": "plt.xlim() sets the x-axis limits of the current plot."
+            },
+            {
+                "question": "How do you create a bar chart?",
+                "options": ["A) plt.bar()", "B) plt.barchart()", "C) plt.column()", "D) plt.bars()"],
+                "answer": "A",
+                "explanation": "plt.bar() creates vertical bar charts in matplotlib."
+            },
+            {
+                "question": "How do you display a plot?",
+                "options": ["A) plt.display()", "B) plt.show()", "C) plt.render()", "D) plt.draw()"],
+                "answer": "B",
+                "explanation": "plt.show() displays the current figure."
+            },
+            {
+                "question": "How do you create multiple plots in one figure?",
+                "options": ["A) plt.subplot(rows, cols, index)", "B) plt.figure()", "C) plt.axes()", "D) plt.grid()"],
+                "answer": "A",
+                "explanation": "plt.subplot() creates multiple plots within a single figure."
+            },
+            {
+                "question": "How do you add grid lines to a plot?",
+                "options": ["A) plt.grid()", "B) plt.gridlines()", "C) plt.add_grid()", "D) plt.show_grid()"],
+                "answer": "A",
+                "explanation": "plt.grid() adds grid lines to the current plot."
+            },
+
+            {
+                "question": "Which library is best for creating statistical visualizations?",
+                "options": ["A) Matplotlib", "B) Seaborn", "C) Plotly", "D) Bokeh"],
+                "answer": "B",
+                "explanation": "Seaborn is built on matplotlib and provides beautiful statistical visualizations with less code."
+            },
+            {
+                "question": "How do you import Seaborn?",
+                "options": ["A) import seaborn", "B) import seaborn as sns", "C) import sns", "D) from seaborn import *"],
+                "answer": "B",
+                "explanation": "The standard convention is 'import seaborn as sns'."
+            },
+            {
+                "question": "Which Seaborn function creates a scatter plot with regression line?",
+                "options": ["A) sns.scatterplot()", "B) sns.regplot()", "C) sns.lmplot()", "D) Both B and C"],
+                "answer": "D",
+                "explanation": "Both sns.regplot() and sns.lmplot() create scatter plots with regression lines."
+            },
+            {
+                "question": "How do you create a heatmap in Seaborn?",
+                "options": ["A) sns.heatmap()", "B) sns.heat()", "C) sns.colormap()", "D) sns.matrix()"],
+                "answer": "A",
+                "explanation": "sns.heatmap() creates heatmaps for visualizing correlation matrices or 2D data."
+            },
+            {
+                "question": "Which Seaborn function is used for distribution plots?",
+                "options": ["A) sns.distplot()", "B) sns.histplot()", "C) sns.displot()", "D) All of the above"],
+                "answer": "D",
+                "explanation": "All three functions can create distribution plots, with displot() being the newer interface."
+            },
+            {
+                "question": "How do you create a box plot in Seaborn?",
+                "options": ["A) sns.boxplot()", "B) sns.box()", "C) sns.whisker()", "D) sns.quartile()"],
+                "answer": "A",
+                "explanation": "sns.boxplot() creates box and whisker plots for showing distributions."
+            },
+            {
+                "question": "What does sns.pairplot() do?",
+                "options": ["A) Plots pairs of variables", "B) Creates scatter plot matrix", "C) Shows relationships between variables", "D) All of the above"],
+                "answer": "D",
+                "explanation": "sns.pairplot() creates a matrix of scatter plots for all pairs of variables."
+            },
+            {
+                "question": "How do you set the style of Seaborn plots?",
+                "options": ["A) sns.set_style()", "B) sns.style()", "C) sns.theme()", "D) sns.set_theme()"],
+                "answer": "A",
+                "explanation": "sns.set_style() sets the aesthetic style of the plots."
+            },
+            {
+                "question": "Which function creates a violin plot?",
+                "options": ["A) sns.violin()", "B) sns.violinplot()", "C) sns.density()", "D) sns.kde()"],
+                "answer": "B",
+                "explanation": "sns.violinplot() creates violin plots showing distribution shape."
+            },
+            {
+                "question": "How do you create a count plot in Seaborn?",
+                "options": ["A) sns.countplot()", "B) sns.count()", "C) sns.frequency()", "D) sns.histogram()"],
+                "answer": "A",
+                "explanation": "sns.countplot() shows counts of observations in each categorical bin."
+            },
+
+            {
+                "question": "Which library is commonly used for machine learning in Python?",
+                "options": ["A) TensorFlow", "B) Scikit-learn", "C) PyTorch", "D) All of the above"],
+                "answer": "D",
+                "explanation": "TensorFlow, Scikit-learn, and PyTorch are all popular machine learning libraries in Python."
+            },
+            {
+                "question": "Which library is primarily used for data manipulation and analysis in Python?",
+                "options": ["A) NumPy", "B) Pandas", "C) Matplotlib", "D) Seaborn"],
+                "answer": "B",
+                "explanation": "Pandas is the go-to library for data manipulation and analysis, providing DataFrames and Series."
+            },
+            {
+                "question": "What does 'df.head()' do in Pandas?",
+                "options": ["A) Shows the last 5 rows", "B) Shows the first 5 rows", "C) Shows column headers", "D) Shows data types"],
+                "answer": "B",
+                "explanation": "df.head() displays the first 5 rows of a DataFrame by default."
+            },
+            {
+                "question": "How do you select a specific column from a Pandas DataFrame?",
+                "options": ["A) df['column_name']", "B) df.get('column_name')", "C) df.select('column_name')", "D) df.column('column_name')"],
+                "answer": "A",
+                "explanation": "Use square brackets with the column name: df['column_name']."
+            },
+            {
+                "question": "Which method groups data in Pandas?",
+                "options": ["A) df.group()", "B) df.groupby()", "C) df.aggregate()", "D) df.cluster()"],
+                "answer": "B",
+                "explanation": "df.groupby() groups DataFrame using a mapper or by a Series of columns."
+            },
+            {
+                "question": "How do you read a CSV file using Pandas?",
+                "options": ["A) pd.load_csv()", "B) pd.read_csv()", "C) pd.import_csv()", "D) pd.open_csv()"],
+                "answer": "B",
+                "explanation": "pd.read_csv() is the standard function to read CSV files into a DataFrame."
+            },
+            {
+                "question": "What does 'df.info()' display?",
+                "options": ["A) Statistical summary", "B) Data types and non-null counts", "C) First few rows", "D) Column correlations"],
+                "answer": "B",
+                "explanation": "df.info() provides information about the DataFrame including data types and non-null counts."
+            },
+            {
+                "question": "Which method is used to handle missing values in Pandas?",
+                "options": ["A) df.remove_na()", "B) df.dropna()", "C) df.delete_missing()", "D) df.clean()"],
+                "answer": "B",
+                "explanation": "df.dropna() removes rows or columns with missing values (NaN)."
+            },
+            {
+                "question": "What does 'df.describe()' return?",
+                "options": ["A) Column names", "B) Data types", "C) Statistical summary", "D) Missing values count"],
+                "answer": "C",
+                "explanation": "df.describe() provides statistical summary including mean, std, min, max, and quartiles."
+            },
+            {
+                "question": "How do you sort a DataFrame by a column in Pandas?",
+                "options": ["A) df.sort('column')", "B) df.sort_values('column')", "C) df.order_by('column')", "D) df.arrange('column')"],
+                "answer": "B",
+                "explanation": "df.sort_values() is used to sort DataFrame by values along either axis."
+            },
+            {
+                "question": "What is the correct way to filter rows in a DataFrame?",
+                "options": ["A) df.filter(df['col'] > 5)", "B) df[df['col'] > 5]", "C) df.where(df['col'] > 5)", "D) df.query('col > 5')"],
+                "answer": "B",
+                "explanation": "Boolean indexing with df[df['col'] > 5] is the most common filtering method."
+            },
+            {
+                "question": "How do you get unique values from a Pandas Series?",
+                "options": ["A) series.unique()", "B) series.distinct()", "C) series.different()", "D) series.uniq()"],
+                "answer": "A",
+                "explanation": "The unique() method returns unique values from a Series."
+            },
+            {
+                "question": "What does 'df.shape' return?",
+                "options": ["A) Data types", "B) Column names", "C) (rows, columns) tuple", "D) Memory usage"],
+                "answer": "C",
+                "explanation": "df.shape returns a tuple representing the dimensionality of the DataFrame (rows, columns)."
+            },
+            {
+                "question": "How do you rename columns in a DataFrame?",
+                "options": ["A) df.rename_columns()", "B) df.rename(columns={'old': 'new'})", "C) df.set_columns()", "D) df.change_names()"],
+                "answer": "B",
+                "explanation": "df.rename(columns={'old_name': 'new_name'}) renames columns."
+            },
+            {
+                "question": "Which method is used to merge two DataFrames?",
+                "options": ["A) df.join()", "B) df.merge()", "C) df.combine()", "D) Both A and B"],
+                "answer": "D",
+                "explanation": "Both merge() and join() can be used to combine DataFrames, with merge() being more flexible."
+            },
+            {
+                "question": "How do you check for missing values in a DataFrame?",
+                "options": ["A) df.isna()", "B) df.missing()", "C) df.null_check()", "D) df.empty()"],
+                "answer": "A",
+                "explanation": "df.isna() or df.isnull() returns a DataFrame showing True for missing values."
+            },
+            {
+                "question": "What does 'df.value_counts()' do on a Series?",
+                "options": ["A) Counts unique values", "B) Counts total values", "C) Counts missing values", "D) Counts duplicates"],
+                "answer": "A",
+                "explanation": "value_counts() returns a Series containing counts of unique values."
+            },
+            {
+                "question": "How do you apply a function to each element in a DataFrame column?",
+                "options": ["A) df['col'].apply(func)", "B) df['col'].map(func)", "C) Both A and B", "D) df['col'].transform(func)"],
+                "answer": "C",
+                "explanation": "Both apply() and map() can be used to apply functions to Series elements."
+            },
+            {
+                "question": "What is the default behavior of pd.read_csv() for headers?",
+                "options": ["A) No header", "B) First row as header", "C) Last row as header", "D) Auto-detect"],
+                "answer": "B",
+                "explanation": "By default, pd.read_csv() treats the first row as column headers."
+            },
+            {
+                "question": "How do you concatenate DataFrames vertically?",
+                "options": ["A) pd.concat([df1, df2])", "B) df1.append(df2)", "C) Both A and B", "D) pd.join([df1, df2])"],
+                "answer": "C",
+                "explanation": "Both pd.concat() and append() can concatenate DataFrames vertically."
+            },
+            {
+                "question": "What does 'df.iloc[0:5, 1:3]' select?",
+                "options": ["A) First 5 rows, columns 1-3", "B) Rows 0-4, columns 1-2", "C) First 5 columns, rows 1-3", "D) Rows 1-5, columns 1-3"],
+                "answer": "B",
+                "explanation": "iloc uses integer-location based indexing. [0:5, 1:3] selects rows 0-4 and columns 1-2."
+            },
+            {
+                "question": "How do you fill missing values with a specific value?",
+                "options": ["A) df.fillna(value)", "B) df.replace_na(value)", "C) df.fill_missing(value)", "D) df.substitute(value)"],
+                "answer": "A",
+                "explanation": "df.fillna(value) fills missing values with the specified value."
+            },
+            {
+                "question": "What is the difference between loc and iloc?",
+                "options": ["A) No difference", "B) loc uses labels, iloc uses integers", "C) loc is faster", "D) iloc is deprecated"],
+                "answer": "B",
+                "explanation": "loc uses label-based indexing while iloc uses integer position-based indexing."
+            },
+            {
+                "question": "How do you get the data type of DataFrame columns?",
+                "options": ["A) df.dtypes", "B) df.types", "C) df.data_types", "D) df.column_types"],
+                "answer": "A",
+                "explanation": "df.dtypes returns the data types of each column in the DataFrame."
+            },
+            {
+                "question": "What does 'df.drop_duplicates()' do?",
+                "options": ["A) Removes duplicate columns", "B) Removes duplicate rows", "C) Removes duplicate values in a column", "D) Removes duplicate indices"],
+                "answer": "B",
+                "explanation": "drop_duplicates() removes duplicate rows from the DataFrame."
+            },
+            {
+                "question": "How do you save a DataFrame to a CSV file?",
+                "options": ["A) df.save_csv('file.csv')", "B) df.to_csv('file.csv')", "C) df.export_csv('file.csv')", "D) df.write_csv('file.csv')"],
+                "answer": "B",
+                "explanation": "df.to_csv() exports the DataFrame to a CSV file."
+            },
+            {
+                "question": "What does 'df.sample(n=5)' do?",
+                "options": ["A) Takes first 5 rows", "B) Takes last 5 rows", "C) Takes 5 random rows", "D) Takes every 5th row"],
+                "answer": "C",
+                "explanation": "sample() returns a random sample of items from the DataFrame."
+            },
+            {
+                "question": "How do you reset the index of a DataFrame?",
+                "options": ["A) df.reset_index()", "B) df.reindex()", "C) df.new_index()", "D) df.index_reset()"],
+                "answer": "A",
+                "explanation": "reset_index() resets the index of the DataFrame to default integer index."
+            },
+            {
+                "question": "What does 'df.corr()' calculate?",
+                "options": ["A) Covariance matrix", "B) Correlation matrix", "C) Standard deviation", "D) Mean values"],
+                "answer": "B",
+                "explanation": "df.corr() computes pairwise correlation of columns, excluding NA/null values."
+            },
+            {
+                "question": "How do you convert a column to datetime in Pandas?",
+                "options": ["A) pd.to_datetime(df['col'])", "B) df['col'].datetime()", "C) pd.datetime(df['col'])", "D) df['col'].to_date()"],
+                "answer": "A",
+                "explanation": "pd.to_datetime() converts strings or numbers to datetime objects."
+            },
+            {
+                "question": "What is a MultiIndex in Pandas?",
+                "options": ["A) Multiple DataFrames", "B) Hierarchical indexing", "C) Multiple columns", "D) Multiple data types"],
+                "answer": "B",
+                "explanation": "MultiIndex allows hierarchical indexing with multiple levels of index labels."
+            },
+
+        
+            {
+                "question": "Which NumPy function creates an array of zeros?",
+                "options": ["A) np.empty()", "B) np.ones()", "C) np.zeros()", "D) np.full()"],
+                "answer": "C",
+                "explanation": "np.zeros() creates an array filled with zeros of specified shape."
+            },
+            {
+                "question": "What is the shape attribute in NumPy arrays?",
+                "options": ["A) Returns the data type", "B) Returns dimensions as tuple", "C) Returns total elements", "D) Returns memory usage"],
+                "answer": "B",
+                "explanation": "The shape attribute returns a tuple representing the dimensions of the array."
+            },
+            {
+                "question": "What does 'np.array([1, 2, 3]).dtype' return?",
+                "options": ["A) The shape", "B) The size", "C) The data type", "D) The dimensions"],
+                "answer": "C",
+                "explanation": "The dtype attribute returns the data type of the array elements."
+            },
+            {
+                "question": "How do you create a 3x3 identity matrix in NumPy?",
+                "options": ["A) np.identity(3)", "B) np.eye(3)", "C) Both A and B", "D) np.ones((3,3))"],
+                "answer": "C",
+                "explanation": "Both np.identity() and np.eye() create identity matrices."
+            },
+            {
+                "question": "What does 'np.arange(0, 10, 2)' create?",
+                "options": ["A) [0, 2, 4, 6, 8]", "B) [0, 2, 4, 6, 8, 10]", "C) [2, 4, 6, 8, 10]", "D) [0, 1, 2, 3, 4]"],
+                "answer": "A",
+                "explanation": "np.arange(start, stop, step) creates an array from 0 to 10 (exclusive) with step 2."
+            },
+            {
+                "question": "How do you reshape a NumPy array?",
+                "options": ["A) array.reshape(shape)", "B) array.resize(shape)", "C) np.reshape(array, shape)", "D) Both A and C"],
+                "answer": "D",
+                "explanation": "Both array.reshape() method and np.reshape() function can reshape arrays."
+            },
+            {
+                "question": "What does 'np.random.seed()' do?",
+                "options": ["A) Generates random numbers", "B) Sets random number generator state", "C) Creates random arrays", "D) Shuffles arrays"],
+                "answer": "B",
+                "explanation": "np.random.seed() sets the random number generator state for reproducible results."
+            },
+            {
+                "question": "How do you find the maximum value in a NumPy array?",
+                "options": ["A) array.max()", "B) np.max(array)", "C) Both A and B", "D) array.maximum()"],
+                "answer": "C",
+                "explanation": "Both array.max() method and np.max() function return the maximum value."
+            },
+            {
+                "question": "What does 'np.linspace(0, 1, 5)' create?",
+                "options": ["A) [0, 0.2, 0.4, 0.6, 0.8]", "B) [0, 0.25, 0.5, 0.75, 1]", "C) [0, 1, 2, 3, 4]", "D) [0, 0.1, 0.2, 0.3, 0.4]"],
+                "answer": "B",
+                "explanation": "np.linspace() creates evenly spaced numbers over a specified interval, including endpoints."
+            },
+            {
+                "question": "How do you calculate the mean of a NumPy array?",
+                "options": ["A) array.mean()", "B) np.mean(array)", "C) Both A and B", "D) array.average()"],
+                "answer": "C",
+                "explanation": "Both array.mean() method and np.mean() function calculate the arithmetic mean."
+            },
+            {
+                "question": "What is broadcasting in NumPy?",
+                "options": ["A) Copying arrays", "B) Operations on different sized arrays", "C) Array transmission", "D) Memory allocation"],
+                "answer": "B",
+                "explanation": "Broadcasting allows NumPy to perform operations on arrays with different shapes."
+            },
+            {
+                "question": "How do you transpose a NumPy array?",
+                "options": ["A) array.T", "B) array.transpose()", "C) np.transpose(array)", "D) All of the above"],
+                "answer": "D",
+                "explanation": "All three methods (.T, .transpose(), np.transpose()) can transpose arrays."
+            },
+            {
+                "question": "What does 'np.concatenate()' do?",
+                "options": ["A) Joins arrays along existing axis", "B) Creates new arrays", "C) Splits arrays", "D) Reshapes arrays"],
+                "answer": "A",
+                "explanation": "np.concatenate() joins a sequence of arrays along an existing axis."
+            },
+            {
+                "question": "How do you create a random array with shape (3,4)?",
+                "options": ["A) np.random.rand(3,4)", "B) np.random.random((3,4))", "C) Both A and B", "D) np.random.array(3,4)"],
+                "answer": "C",
+                "explanation": "Both np.random.rand() and np.random.random() can create random arrays."
+            },
+            {
+                "question": "What does 'np.where()' do?",
+                "options": ["A) Finds array indices", "B) Conditional element selection", "C) Locates elements", "D) All of the above"],
+                "answer": "D",
+                "explanation": "np.where() can find indices, select elements conditionally, and locate elements."
+            },
+            {
+                "question": "How do you calculate element-wise multiplication?",
+                "options": ["A) array1 * array2", "B) np.multiply(array1, array2)", "C) Both A and B", "D) array1.multiply(array2)"],
+                "answer": "C",
+                "explanation": "Both * operator and np.multiply() perform element-wise multiplication."
+            },
+            {
+                "question": "What is the difference between np.array() and np.asarray()?",
+                "options": ["A) No difference", "B) asarray() doesn't copy if input is already array", "C) array() is faster", "D) asarray() is deprecated"],
+                "answer": "B",
+                "explanation": "np.asarray() doesn't make a copy if the input is already an ndarray."
+            },
+            {
+                "question": "How do you save a NumPy array to a file?",
+                "options": ["A) np.save()", "B) array.save()", "C) np.savez()", "D) Both A and C"],
+                "answer": "D",
+                "explanation": "Both np.save() for single arrays and np.savez() for multiple arrays can save to files."
+            },
+            {
+                "question": "What does 'np.flatten()' do?",
+                "options": ["A) Returns a copy as 1D array", "B) Returns a view as 1D array", "C) Compresses array", "D) Removes dimensions"],
+                "answer": "A",
+                "explanation": "flatten() returns a copy of the array collapsed into one dimension."
+            },
+            {
+                "question": "How do you calculate the dot product of two arrays?",
+                "options": ["A) np.dot(a, b)", "B) a @ b", "C) a.dot(b)", "D) All of the above"],
+                "answer": "D",
+                "explanation": "All three methods can calculate dot products: np.dot(), @ operator, and .dot() method."
+            },
+            {
+                "question": "What does 'np.argmax()' return?",
+                "options": ["A) Maximum value", "B) Index of maximum value", "C) Maximum values along axis", "D) Sorted indices"],
+                "answer": "B",
+                "explanation": "np.argmax() returns the indices of the maximum values along an axis."
+            },
+            {
+                "question": "How do you check if two arrays are equal?",
+                "options": ["A) array1 == array2", "B) np.array_equal(array1, array2)", "C) np.allclose(array1, array2)", "D) All can be used"],
+                "answer": "D",
+                "explanation": "== for element-wise, array_equal for exact equality, allclose for approximate equality."
+            },
+            {
+                "question": "What is the purpose of np.newaxis?",
+                "options": ["A) Creates new arrays", "B) Adds new dimension", "C) Removes dimensions", "D) Changes axis order"],
+                "answer": "B",
+                "explanation": "np.newaxis (alias for None) is used to add new axes to arrays."
+            },
+            {
+                "question": "How do you create an array with values from 1 to 10?",
+                "options": ["A) np.arange(1, 11)", "B) np.range(1, 10)", "C) np.array([1:10])", "D) np.sequence(1, 10)"],
+                "answer": "A",
+                "explanation": "np.arange(1, 11) creates an array from 1 to 10 (11 is exclusive)."
+            },
+            {
+                "question": "What does 'array.ndim' return?",
+                "options": ["A) Array size", "B) Number of dimensions", "C) Array shape", "D) Data type"],
+                "answer": "B",
+                "explanation": "The ndim attribute returns the number of array dimensions."
+            },
+
+            {
+                "question": "What is the correct way to import matplotlib.pyplot?",
+                "options": ["A) import matplotlib as plt", "B) import pyplot as plt", "C) import matplotlib.pyplot as plt", "D) from matplotlib import pyplot"],
+                "answer": "C",
+                "explanation": "The standard convention is 'import matplotlib.pyplot as plt'."
+            },
+            {
+                "question": "How do you create a line plot in matplotlib?",
+                "options": ["A) plt.line()", "B) plt.plot()", "C) plt.lineplot()", "D) plt.draw()"],
+                "answer": "B",
+                "explanation": "plt.plot() creates line plots in matplotlib."
+            },
+            {
+                "question": "How do you add a title to a plot?",
+                "options": ["A) plt.title('Title')", "B) plt.set_title('Title')", "C) plt.add_title('Title')", "D) plt.name('Title')"],
+                "answer": "A",
+                "explanation": "plt.title() sets the title of the current plot."
+            },
+            {
+                "question": "How do you add axis labels in matplotlib?",
+                "options": ["A) plt.xlabel() and plt.ylabel()", "B) plt.label_x() and plt.label_y()", "C) plt.x_label() and plt.y_label()", "D) plt.axis_labels()"],
+                "answer": "A",
+                "explanation": "plt.xlabel() and plt.ylabel() set the x and y axis labels respectively."
+            },
+            {
+                "question": "How do you create a scatter plot?",
+                "options": ["A) plt.scatter()", "B) plt.scatterplot()", "C) plt.points()", "D) plt.dot()"],
+                "answer": "A",
+                "explanation": "plt.scatter() creates scatter plots with individual data points."
+            },
+            {
+                "question": "How do you save a plot to a file?",
+                "options": ["A) plt.save()", "B) plt.savefig()", "C) plt.export()", "D) plt.write()"],
+                "answer": "B",
+                "explanation": "plt.savefig() saves the current figure to a file."
+            },
+            {
+                "question": "How do you create subplots in matplotlib?",
+                "options": ["A) plt.subplot()", "B) plt.subplots()", "C) Both A and B", "D) plt.create_subplots()"],
+                "answer": "C",
+                "explanation": "Both plt.subplot() and plt.subplots() can create subplots with different approaches."
+            },
+            {
+                "question": "How do you add a legend to a plot?",
+                "options": ["A) plt.legend()", "B) plt.add_legend()", "C) plt.show_legend()", "D) plt.key()"],
+                "answer": "A",
+                "explanation": "plt.legend() adds a legend to the current plot."
+            },
+            {
+                "question": "How do you create a histogram?",
+                "options": ["A) plt.hist()", "B) plt.histogram()", "C) plt.bar()", "D) plt.frequency()"],
+                "answer": "A",
+                "explanation": "plt.hist() creates histograms showing frequency distributions."
+            },
+            {
+                "question": "How do you change the color of a plot line?",
+                "options": ["A) plt.plot(x, y, color='red')", "B) plt.plot(x, y, c='red')", "C) Both A and B", "D) plt.color('red')"],
+                "answer": "C",
+                "explanation": "Both 'color' and 'c' parameters can specify line colors in plot functions."
+            },
+            {
+                "question": "How do you set the x-axis limits?",
+                "options": ["A) plt.xlim()", "B) plt.set_xlim()", "C) plt.x_limits()", "D) plt.xrange()"],
+                "answer": "A",
+                "explanation": "plt.xlim() sets the x-axis limits of the current plot."
+            },
+            {
+                "question": "How do you create a bar chart?",
+                "options": ["A) plt.bar()", "B) plt.barchart()", "C) plt.column()", "D) plt.bars()"],
+                "answer": "A",
+                "explanation": "plt.bar() creates vertical bar charts in matplotlib."
+            },
+            {
+                "question": "How do you display a plot?",
+                "options": ["A) plt.display()", "B) plt.show()", "C) plt.render()", "D) plt.draw()"],
+                "answer": "B",
+                "explanation": "plt.show() displays the current figure."
+            },
+            {
+                "question": "How do you create multiple plots in one figure?",
+                "options": ["A) plt.subplot(rows, cols, index)", "B) plt.figure()", "C) plt.axes()", "D) plt.grid()"],
+                "answer": "A",
+                "explanation": "plt.subplot() creates multiple plots within a single figure."
+            },
+            {
+                "question": "How do you add grid lines to a plot?",
+                "options": ["A) plt.grid()", "B) plt.gridlines()", "C) plt.add_grid()", "D) plt.show_grid()"],
+                "answer": "A",
+                "explanation": "plt.grid() adds grid lines to the current plot."
+            },
+
+           
+            {
+                "question": "Which library is best for creating statistical visualizations?",
+                "options": ["A) Matplotlib", "B) Seaborn", "C) Plotly", "D) Bokeh"],
+                "answer": "B",
+                "explanation": "Seaborn is built on matplotlib and provides beautiful statistical visualizations with less code."
+            },
+            {
+                "question": "How do you import Seaborn?",
+                "options": ["A) import seaborn", "B) import seaborn as sns", "C) import sns", "D) from seaborn import *"],
+                "answer": "B",
+                "explanation": "The standard convention is 'import seaborn as sns'."
+            },
+            {
+                "question": "Which Seaborn function creates a scatter plot with regression line?",
+                "options": ["A) sns.scatterplot()", "B) sns.regplot()", "C) sns.lmplot()", "D) Both B and C"],
+                "answer": "D",
+                "explanation": "Both sns.regplot() and sns.lmplot() create scatter plots with regression lines."
+            },
+            {
+                "question": "How do you create a heatmap in Seaborn?",
+                "options": ["A) sns.heatmap()", "B) sns.heat()", "C) sns.colormap()", "D) sns.matrix()"],
+                "answer": "A",
+                "explanation": "sns.heatmap() creates heatmaps for visualizing correlation matrices or 2D data."
+            },
+            {
+                "question": "Which Seaborn function is used for distribution plots?",
+                "options": ["A) sns.distplot()", "B) sns.histplot()", "C) sns.displot()", "D) All of the above"],
+                "answer": "D",
+                "explanation": "All three functions can create distribution plots, with displot() being the newer interface."
+            },
+            {
+                "question": "How do you create a box plot in Seaborn?",
+                "options": ["A) sns.boxplot()", "B) sns.box()", "C) sns.whisker()", "D) sns.quartile()"],
+                "answer": "A",
+                "explanation": "sns.boxplot() creates box and whisker plots for showing distributions."
+            },
+            {
+                "question": "What does sns.pairplot() do?",
+                "options": ["A) Plots pairs of variables", "B) Creates scatter plot matrix", "C) Shows relationships between variables", "D) All of the above"],
+                "answer": "D",
+                "explanation": "sns.pairplot() creates a matrix of scatter plots for all pairs of variables."
+            },
+            {
+                "question": "How do you set the style of Seaborn plots?",
+                "options": ["A) sns.set_style()", "B) sns.style()", "C) sns.theme()", "D) sns.set_theme()"],
+                "answer": "A",
+                "explanation": "sns.set_style() sets the aesthetic style of the plots."
+            },
+            {
+                "question": "Which function creates a violin plot?",
+                "options": ["A) sns.violin()", "B) sns.violinplot()", "C) sns.density()", "D) sns.kde()"],
+                "answer": "B",
+                "explanation": "sns.violinplot() creates violin plots showing distribution shape."
+            },
+            {
+                "question": "How do you create a count plot in Seaborn?",
+                "options": ["A) sns.countplot()", "B) sns.count()", "C) sns.frequency()", "D) sns.histogram()"],
+                "answer": "A",
+                "explanation": "sns.countplot() shows counts of observations in each categorical bin."
+            },
+
+           
+            {
+                "question": "Which library is commonly used for machine learning in Python?",
+                "options": ["A) TensorFlow", "B) Scikit-learn", "C) PyTorch", "D) All of the above"],
+                "answer": "D",
+                "explanation": "TensorFlow, Scikit-learn, and PyTorch are all popular machine learning libraries in Python."
+            },
+            {
+                "question": "How do you import scikit-learn's train_test_split?",
+                "options": ["A) from sklearn import train_test_split", "B) from sklearn.model_selection import train_test_split", "C) import sklearn.train_test_split", "D) from ml import train_test_split"],
+                "answer": "B",
+                "explanation": "train_test_split is in the model_selection module of scikit-learn."
+            },
+            {
+                "question": "What does train_test_split() do?",
+                "options": ["A) Splits data into training and testing sets", "B) Trains a model", "C) Tests a model", "D) Validates a model"],
+                "answer": "A",
+                "explanation": "train_test_split() randomly splits datasets into training and testing portions."
+            },
+            {
+                "question": "How do you import Linear Regression from scikit-learn?",
+                "options": ["A) from sklearn import LinearRegression", "B) from sklearn.linear_model import LinearRegression", "C) from sklearn.regression import LinearRegression", "D) import sklearn.LinearRegression"],
+                "answer": "B",
+                "explanation": "LinearRegression is in the linear_model module of scikit-learn."
+            },
+            {
+                "question": "What method is used to train a model in scikit-learn?",
+                "options": ["A) model.train()", "B) model.fit()", "C) model.learn()", "D) model.build()"],
+                "answer": "B",
+                "explanation": "The fit() method is used to train/fit models in scikit-learn."
+            },
+            {
+                "question": "What method is used to make predictions?",
+                "options": ["A) model.predict()", "B) model.forecast()", "C) model.estimate()", "D) model.output()"],
+                "answer": "A",
+                "explanation": "The predict() method generates predictions from trained models."
+            },
+            {
+                "question": "How do you calculate accuracy in classification?",
+                "options": ["A) from sklearn.metrics import accuracy_score", "B) from sklearn.accuracy import score", "C) from sklearn import accuracy", "D) from ml.metrics import accuracy"],
+                "answer": "A",
+                "explanation": "accuracy_score is imported from sklearn.metrics module."
+            },
+            {
+                "question": "What is cross-validation used for?",
+                "options": ["A) Model training", "B) Model evaluation", "C) Data preprocessing", "D) Feature selection"],
+                "answer": "B",
+                "explanation": "Cross-validation is a technique for evaluating model performance."
+            },
+            {
+                "question": "How do you import StandardScaler?",
+                "options": ["A) from sklearn.preprocessing import StandardScaler", "B) from sklearn.scaling import StandardScaler", "C) from sklearn import StandardScaler", "D) from sklearn.normalize import StandardScaler"],
+                "answer": "A",
+                "explanation": "StandardScaler is in the preprocessing module for feature scaling."
+            },
+            {
+                "question": "What does GridSearchCV do?",
+                "options": ["A) Searches for optimal hyperparameters", "B) Creates grids", "C) Validates data", "D) Splits datasets"],
+                "answer": "A",
+                "explanation": "GridSearchCV performs exhaustive search over parameter values for optimal hyperparameters."
+            },
+
+            
+            {
+                "question": "What is the purpose of data preprocessing?",
+                "options": ["A) To clean and prepare data", "B) To visualize data", "C) To store data", "D) To analyze data"],
+                "answer": "A",
+                "explanation": "Data preprocessing involves cleaning, transforming, and preparing data for analysis."
+            },
+            {
+                "question": "What is feature engineering?",
+                "options": ["A) Creating new features from existing data", "B) Selecting important features", "C) Removing features", "D) All of the above"],
+                "answer": "D",
+                "explanation": "Feature engineering encompasses creating, selecting, and transforming features."
+            },
+            {
+                "question": "What is the difference between supervised and unsupervised learning?",
+                "options": ["A) Supervised uses labeled data", "B) Unsupervised finds patterns without labels", "C) Both A and B", "D) No difference"],
+                "answer": "C",
+                "explanation": "Supervised learning uses labeled data, while unsupervised learning finds patterns in unlabeled data."
+            },
+            {
+                "question": "What is overfitting in machine learning?",
+                "options": ["A) Model performs well on training but poorly on test data", "B) Model is too simple", "C) Model trains too fast", "D) Model has too few parameters"],
+                "answer": "A",
+                "explanation": "Overfitting occurs when a model learns training data too well but fails to generalize."
+            },
+            {
+                "question": "What is the purpose of normalization/scaling?",
+                "options": ["A) To bring features to similar scales", "B) To reduce data size", "C) To remove outliers", "D) To add new features"],
+                "answer": "A",
+                "explanation": "Normalization/scaling ensures all features contribute equally to model training."
+            },
+            {
+                "question": "What is a confusion matrix?",
+                "options": ["A) A table showing classification results", "B) A correlation matrix", "C) A data structure", "D) A plotting function"],
+                "answer": "A",
+                "explanation": "A confusion matrix shows true vs predicted classifications in a table format."
+            },
+            {
+                "question": "What does ROC curve measure?",
+                "options": ["A) Model accuracy", "B) True positive vs false positive rates", "C) Feature importance", "D) Data distribution"],
+                "answer": "B",
+                "explanation": "ROC curve plots true positive rate against false positive rate at various thresholds."
+            },
+            {
+                "question": "What is the purpose of train-validation-test split?",
+                "options": ["A) To evaluate model performance objectively", "B) To increase data size", "C) To reduce computation", "D) To visualize data"],
+                "answer": "A",
+                "explanation": "The three-way split allows for training, hyperparameter tuning, and final evaluation."
+            },
+            {
+                "question": "What is Principal Component Analysis (PCA)?",
+                "options": ["A) Dimensionality reduction technique", "B) Classification algorithm", "C) Data visualization method", "D) Feature selection method"],
+                "answer": "A",
+                "explanation": "PCA reduces dimensionality by finding principal components that explain maximum variance."
+            },
+            {
+                "question": "What is the curse of dimensionality?",
+                "options": ["A) Performance degradation with high dimensions", "B) Too much data", "C) Computational complexity", "D) Memory issues"],
+                "answer": "A",
+                "explanation": "The curse of dimensionality refers to problems that arise when working with high-dimensional data."
+            }
+        ]
