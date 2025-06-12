@@ -3,22 +3,36 @@
 <head>
     <title>Flashcard Quiz</title>
     <link rel="stylesheet" href="/static/style.css">
-   
 </head>
 <body>
     <div class="flashcard" id="flashcard">
         <div class="front">
             <h2>Question {{ index }} of {{ total }}</h2>
             <p>{{ q['question'] }}</p>
-            <form method="post" action="/templates/results.html">
+            <form id="quiz-form"> {# Removed action, JavaScript will handle #}
                 {% for opt in q['options'] %}
                     <label>
-                        <input type="radio" name="option" value="{{ opt[0] }}" required> {{ opt }}
+                        <input type="radio" name="option" value="{{ opt[0] }}" required {% if answered_correctly_this_q %}disabled{% endif %}> {{ opt }}
                     </label><br>
                 {% endfor %}
-                <button type="submit">Submit Answer</button>
+                <button type="submit" id="submit-answer" {% if answered_correctly_this_q %}style="display:none;"{% endif %}>Submit Answer</button>
             </form>
-            <p>Score: {{ score }}</p>
+            <p>Score: <span id="current-score">{{ score }}</span></p>
+
+            <div id="feedback" class="feedback" {% if not answered_correctly_this_q %}style="display:none;"{% endif %}>
+                {% if answered_correctly_this_q %}
+                    <span class="correct">You answered this question correctly!</span>
+                {% endif %}
+            </div>
+            <div id="explanation" class="explanation" {% if not answered_correctly_this_q %}style="display:none;"{% endif %}>
+                <h3>Explanation:</h3>
+                <p id="explanation-text">
+                    {% if answered_correctly_this_q %}
+                        {{ q['explanation'] if q['explanation'] is defined else 'No explanation provided for this question.' }}
+                    {% endif %}
+                </p>
+            </div>
+            <button id="next-question" {% if not answered_correctly_this_q %}style="display:none;"{% endif %}>Next Question</button>
         </div>
     </div>
 </body>
